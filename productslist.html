@@ -36,8 +36,68 @@
                 </div>
                 <!-- end header -->
 
+                <!-- Modal -->
+                <div class="d-flex">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn ml-auto btn-lg
+                        btn-outline-primary"
+                        data-toggle="modal" data-target="#exampleModal">
+                        +
+                    </button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1"
+                        role="dialog" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <p class="modal-title h6 lead bold"
+                                        id="exampleModalLabel">Nuevo Producto</p>
+                                    <button type="button" class="close"
+                                        data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body text-left">
+                                    <p class="h4">Producto</p>
+                                    <hr>
+                                    <!-- inicio form agregar producto -->
+                                    <form>
+                                        <div class="form-group row p-0 m-0">
+                                            <label class="col-5 col-form-label " for="nombre">Nombre</label>
+                                            <input type="text"
+                                                class="form-control col-5 ml-auto"
+                                                id="nombre"
+                                                aria-describedby="nombreHelp"
+                                                placeholder="Nombre del Producto">
+                                            
+                                        </div>
+                                        <div class="form-group row p-0 m-0">
+                                            <label class="col-5 col-form-label " for="precio">Precio</label>
+                                            <input type="text"
+                                                class="form-control col-5 ml-auto"
+                                                id="precio"
+                                                placeholder="Precio del Producto">
+                                        </div>
+                                    </form>
+                                    <!-- fin form agregar producto -->
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn
+                                        btn-secondary"
+                                        data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn
+                                        btn-primary">Save
+                                        changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end modal -->
+
                 <!-- table -->
-                <div class="py-5 my-3">
+                <div class="py-5 my-3 shadow px-5">
                     <table class="table table-hover">
                         <thead>
                             <tr class="table-borderless">
@@ -53,7 +113,16 @@
                                 <td>fdjvndfkvdn</td>
                                 <td>444</td>
                                 <td>
-                                    Sat Aug 08 2020 16:16:00 GTM-0400 (Bolivia Time)
+                                    Sat Aug 08 2020 16:16:00 GTM-0400 (Bolivia
+                                    Time)
+                                </td>
+                                <td>
+                                    <button class="btn btn-outline-primary">
+                                        Editar
+                                    </button>
+                                    <button class="btn btn-outline-primary">
+                                        Remover
+                                    </button>
                                 </td>
                             </tr>
                             <tr>
@@ -61,7 +130,16 @@
                                 <td>sdsfdfsd</td>
                                 <td>222</td>
                                 <td>
-                                    Sat Aug 08 2020 16:16:00 GTM-0400 (Bolivia Time)
+                                    Sat Aug 08 2020 16:16:00 GTM-0400 (Bolivia
+                                    Time)
+                                </td>
+                                <td>
+                                    <button class="btn btn-outline-primary">
+                                        Editar
+                                    </button>
+                                    <button class="btn btn-outline-primary">
+                                        Remover
+                                    </button>
                                 </td>
                             </tr>
                         </tbody>
@@ -73,12 +151,27 @@
         <!-- end main -->
 
         <!-- footer -->
-        <footer>
-
+        <footer class="text-center fixed-bottom bg-light py-1 d-block lead">
+            <p>Muchas gracias por participar, seguimos en contacto <a href="#">El
+                    curso completo</a>.</p>
         </footer>
         <!-- end footer -->
 
-        <script src="Assets/Lib/jQuery/jquery-3.5.1.min.js"></script>
+
+        <!-- <script src="Assets/Lib/jQuery/jquery-3.5.1.min.js"></script> -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
         <script src="Assets/Js/productslist.js"></script>
+
     </body>
 </html>
