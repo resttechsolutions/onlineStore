@@ -15,9 +15,9 @@
             <h5 class="my-0 mr-md-auto font-weight-normal">
             </h5>
             <nav class="my-2 my-md-0 mr-md-3">
-                <a class="p-2 text-dark" href="#">Lista Categorias</a>
-                <a class="p-2 text-dark" href="#">Lista Productos</a>
-                <a class="p-2 text-dark" href="#">Comprar</a>
+                <a id="home" class="p-2 text-dark" href="#">Inicio</a>
+                <a id="listaCategorias" class="p-2 text-dark" href="#">Lista Categorias</a>
+                <a id="listaProductos" class="p-2 text-dark" href="#">Lista Productos</a>
             </nav>
             <a id="btn-cerrarSesion" class="btn btn-outline-primary" href="#">Cerrar
                 Sesion</a>
@@ -26,7 +26,8 @@
 
         <!-- main -->
         <main role="main" class="text-center">
-            <div class="container">
+            <div id="divError"  class="d-none"></div>
+            <div id="PageOk" class="container">
                 <!-- header -->
                 <div>
                     <img src="Assets/Img/logo-intec.jpg" alt="" class="img-fluid"

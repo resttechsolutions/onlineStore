@@ -1,7 +1,9 @@
-$('#login-btn').click(function(){
+// Validacion form en caso de hacer submit con campo vacio
+$('#login-btn').click(() => {
     let _username = $('#UserName').val();
     let _password = $('#Password').val();
 
+    // Impresion del div que muestra el error
     if (_username == '' || _password == '') {
         $('#divError').show();
         $('#divError').removeClass().addClass('alert');
@@ -38,7 +40,7 @@ $('#login-btn').click(function(){
     $('#divError').html('<strong>CREDENCIALES VALIDAS!</strong> Usuario y Clave Correcta');
 
     //Call Timeout from javascript and set two seconds from execute
-    setTimeout(function(){
+    setTimeout(() => {
         //Set or Update Local Storage Variable
         localStorage.setItem('UserIsValid', 1);
         //Redirect to HTML HomePage

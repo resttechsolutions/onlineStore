@@ -15,9 +15,10 @@
             <h5 class="my-0 mr-md-auto font-weight-normal">
             </h5>
             <nav class="my-2 my-md-0 mr-md-3">
-                <a class="p-2 text-dark" href="#">Lista Categorias</a>
-                <a class="p-2 text-dark" href="#">Lista Productos</a>
-                <a class="p-2 text-dark" href="#">Comprar</a>
+                <a id="home" class="p-2 text-dark" href="#">Inicio</a>
+                <a id="listaProductos" class="p-2 text-dark" href="#">Lista
+                    Productos</a>
+                <a id="comprar" class="p-2 text-dark" href="#">Comprar</a>
             </nav>
             <a id="btn-cerrarSesion" class="btn btn-outline-primary" href="#">Cerrar
                 Sesion</a>
@@ -26,7 +27,8 @@
 
         <!-- main -->
         <main role="main" class="text-center">
-            <div class="container">
+            <div class="d-none" id="divError"></div>
+            <div class="container" id="PageOk">
                 <!-- header -->
                 <div>
                     <img src="Assets/Img/logo-intec.jpg" alt=""
@@ -39,7 +41,7 @@
                 <!-- Modal -->
                 <div class="d-flex">
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn ml-auto btn-lg
+                    <button id="btnAdd" type="button" class="btn ml-auto btn-lg
                         btn-outline-primary"
                         data-toggle="modal" data-target="#exampleModal">
                         +
@@ -63,22 +65,26 @@
                                     <!-- inicio form agregar producto -->
                                     <form>
                                         <div class="form-group row p-0 m-0">
-                                            <label class="col-5 col-form-label"for="nombre">Nombre</label>
+                                            <label class="col-5 col-form-label"
+                                                for="nombre">Nombre</label>
                                             <input type="text"
                                                 class="form-control col-5
                                                 ml-auto"
                                                 id="nombre"
                                                 aria-describedby="nombreHelp"
-                                                placeholder="Nombre de la Categoría">
+                                                placeholder="Nombre de la
+                                                Categoría">
 
                                         </div>
                                         <div class="form-group row p-0 m-0">
-                                            <label class="col-5 col-form-label"for="precio">Precio</label>
+                                            <label class="col-5 col-form-label"
+                                                for="precio">Precio</label>
                                             <input type="text"
                                                 class="form-control col-5
                                                 ml-auto"
                                                 id="precio"
-                                                placeholder="Precio de la Categoría">
+                                                placeholder="Precio de la
+                                                Categoría">
                                         </div>
                                     </form>
                                     <!-- fin form agregar producto -->
@@ -99,7 +105,7 @@
                 <!-- end modal -->
 
                 <!-- table -->
-                <div class="py-5 my-3 shadow px-5 ">
+                <div class="py-5 my-3 shadow px-5">
                     <table class="table table-hover">
                         <thead>
                             <tr class="table-borderless">
@@ -148,13 +154,16 @@
                     </table>
                 </div>
                 <!-- end table -->
+
+
             </div>
         </main>
         <!-- end main -->
 
         <!-- footer -->
         <footer class="text-center fixed-bottom bg-light py-1 d-block lead">
-            <p>Muchas gracias por participar, seguimos en contacto <a href="#">El
+            <p>Muchas gracias por participar, seguimos en contacto <a
+                    href="#">El
                     curso completo</a>.</p>
         </footer>
         <!-- end footer -->
