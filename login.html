@@ -20,17 +20,17 @@
             <div id="divError" style="display: none" class="alert"></div>
             <div class="form-group">
                 <label for="UserName"><b>Username</b></label>
-                <input class="form-control" type="text" placeholder="Enter Username" id="UserName">
+                <input class="form-control keypress" type="text" placeholder="Enter Username" id="UserName">
             </div>
             <div class="form-group">
                 <label for="psw"><b>Password</b></label>
-                <input class="form-control" type="password" placeholder="Enter Password" id="Password">
+                <input class="form-control keypress" type="password" placeholder="Enter Password" id="Password">
             </div>
             <button class="btn btn-success w-100 mb-2" id="login-btn"
                 type="button">Login</button>
             <div class="form-group">
                 <label>
-                    <input type="checkbox" checked="checked" name="remember"
+                    <input type="checkbox" name="remember" 
                         id="remember">
                     Remember me
                 </label>
@@ -38,7 +38,7 @@
         </div>
 
         <div class="container p-3" style="background-color:#f1f1f1">
-            <button type="button" class="btn btn-danger">Cancel</button>
+            <button id="cancel-btn" type="button" class="btn btn-danger">Cancel</button>
             <span class="float-right">Forgot <a href="#">password?</a></span>
         </div>
 

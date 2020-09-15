@@ -16,7 +16,8 @@
             </h5>
             <nav class="my-2 my-md-0 mr-md-3">
                 <a id="home" class="p-2 text-dark" href="#">Inicio</a>
-                <a id="listaCategorias" class="p-2 text-dark" href="#">Lista Categorias</a>
+                <a id="listaCategorias" class="p-2 text-dark" href="#">Lista
+                    Categorias</a>
                 <a id="comprar" class="p-2 text-dark" href="#">Comprar</a>
             </nav>
             <a id="btn-cerrarSesion" class="btn btn-outline-primary" href="#">Cerrar
@@ -59,25 +60,33 @@
                                     </button>
                                 </div>
                                 <div class="modal-body text-left">
+                                    <div class="d-none alert alert-wartning"
+                                        id="divError">Error! Debe completar
+                                        todas las informaciones</div>
                                     <p class="h4">Producto</p>
                                     <hr>
                                     <!-- inicio form agregar producto -->
                                     <form>
                                         <div class="form-group row p-0 m-0">
-                                            <label class="col-5 col-form-label " for="nombre">Nombre</label>
+                                            <label class="col-5 col-form-label"for="nombre">Nombre</label>
                                             <input type="text"
-                                                class="form-control col-5 ml-auto"
+                                                class="form-control col-5
+                                                ml-auto"
                                                 id="nombre"
                                                 aria-describedby="nombreHelp"
-                                                placeholder="Nombre del Producto">
-                                            
+                                                placeholder="Nombre del
+                                                Producto">
+
                                         </div>
                                         <div class="form-group row p-0 m-0">
-                                            <label class="col-5 col-form-label " for="precio">Precio</label>
+                                            <label class="col-5 col-form-label"for="precio">Precio</label>
                                             <input type="text"
-                                                class="form-control col-5 ml-auto"
+                                                class="form-control col-5
+                                                ml-auto"
                                                 id="precio"
-                                                placeholder="Precio del Producto">
+                                                numeric
+                                                placeholder="Precio del
+                                                Producto">
                                         </div>
                                     </form>
                                     <!-- fin form agregar producto -->
@@ -88,7 +97,7 @@
                                         btn-secondary"
                                         data-dismiss="modal">Close</button>
                                     <button type="button" class="btn
-                                        btn-primary">Save
+                                        btn-primary" onclick="add_product()">Save
                                         changes</button>
                                 </div>
                             </div>
@@ -99,7 +108,7 @@
 
                 <!-- table -->
                 <div class="py-5 my-3 shadow px-5 table-responsive-sm">
-                    <table class="table table-hover">
+                    <table id="product-table" class="table table-hover">
                         <thead>
                             <tr class="table-borderless">
                                 <th scope="col">#</th>
@@ -109,7 +118,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <!-- <tr>
                                 <th scope="row">1</th>
                                 <td>fdjvndfkvdn</td>
                                 <td>444</td>
@@ -142,7 +151,7 @@
                                         Remover
                                     </button>
                                 </td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
                 </div>

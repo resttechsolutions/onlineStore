@@ -43,7 +43,8 @@
                     <!-- Button trigger modal -->
                     <button id="btnAdd" type="button" class="btn ml-auto btn-lg
                         btn-outline-primary"
-                        data-toggle="modal" data-target="#exampleModal">
+                        data-toggle="modal" data-target="#exampleModal"
+                        onclick="showModal()">
                         +
                     </button>
                     <div class="modal fade" id="exampleModal" tabindex="-1"
@@ -60,6 +61,12 @@
                                     </button>
                                 </div>
                                 <div class="modal-body text-left">
+                                    
+                                    <div class="d-none alert alert-warning text-center h5"
+                                        id="divErrorModal"><strong>Alerta!</strong>
+                                        Debe completar todas las informaciones
+                                    </div>
+
                                     <p class="h4">Categoría</p>
                                     <hr>
                                     <!-- inicio form agregar producto -->
@@ -70,10 +77,9 @@
                                             <input type="text"
                                                 class="form-control col-5
                                                 ml-auto"
-                                                id="nombre"
+                                                id="category-name"
                                                 aria-describedby="nombreHelp"
-                                                placeholder="Nombre de la
-                                                Categoría">
+                                                placeholder="Nombre de la Categoría">
 
                                         </div>
                                         <div class="form-group row p-0 m-0">
@@ -82,9 +88,8 @@
                                             <input type="text"
                                                 class="form-control col-5
                                                 ml-auto"
-                                                id="precio"
-                                                placeholder="Precio de la
-                                                Categoría">
+                                                id="category-desc"
+                                                placeholder="Descripcion de la Categoría">
                                         </div>
                                     </form>
                                     <!-- fin form agregar producto -->
@@ -94,8 +99,8 @@
                                     <button type="button" class="btn
                                         btn-secondary"
                                         data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn
-                                        btn-primary">Save
+                                    <button id="btn-save" type="button" class="btn
+                                        btn-primary" onclick="add_category()">Save
                                         changes</button>
                                 </div>
                             </div>
@@ -105,51 +110,19 @@
                 <!-- end modal -->
 
                 <!-- table -->
-                <div class="py-5 my-3 shadow px-5">
-                    <table class="table table-hover">
+                <div class="py-5 my-3 shadow px-5 table-responsive-sm">
+                    <table id="category-table" class="table table-hover">
                         <thead>
                             <tr class="table-borderless">
                                 <th scope="col">#</th>
                                 <th scope="col">Nombre</th>
                                 <th scope="col">Precio</th>
                                 <th scope="col">Fecha</th>
+                                <th scope="col"></th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>fdjvndfkvdn</td>
-                                <td>555</td>
-                                <td>
-                                    Sat Aug 08 2020 16:16:00 GTM-0400 (Bolivia
-                                    Time)
-                                </td>
-                                <td>
-                                    <button class="btn btn-outline-primary">
-                                        Editar
-                                    </button>
-                                    <button class="btn btn-outline-primary">
-                                        Remover
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>sdsfdfsd</td>
-                                <td>333</td>
-                                <td>
-                                    Sat Aug 08 2020 16:16:00 GTM-0400 (Bolivia
-                                    Time)
-                                </td>
-                                <td>
-                                    <button class="btn btn-outline-primary">
-                                        Editar
-                                    </button>
-                                    <button class="btn btn-outline-primary">
-                                        Remover
-                                    </button>
-                                </td>
-                            </tr>
+
                         </tbody>
                     </table>
                 </div>
