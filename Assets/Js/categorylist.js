@@ -60,6 +60,7 @@ function add_category(){
     $('#category-name').val('');
     $('#category-desc').val('');
 }
+
 //Getting data from localStorage and filling the table
 function get_my_categories() { 
 
@@ -76,8 +77,8 @@ function get_my_categories() {
         '<td>' + k.name + '</td>' +
         '<td>' + k.desc + '</td>' +
         '<td>' + k.date + '</td>' +
-        '<td><button class="btn btn-outline-info btn-sm mr-2" onclick="read(' + i + ')"> Edit</button></td>' +
-        '<td><button class="btn btn-outline-danger btn-sm mr-2" onclick="remove(' + i + ')"> Remove</button></td>' +
+        '<td><button class="btn btn-outline-info btn-sm mr-2" onclick="read(' + i + ')"> Editar</button></td>' +
+        '<td><button class="btn btn-outline-danger btn-sm mr-2" onclick="remove(' + i + ')"> Eliminar</button></td>' +
         '</tr>' ;
 
         // Adding the tbody to the table
@@ -95,11 +96,11 @@ function get_my_categories() {
      $('#category-name').val(category.name);
      $('#category-desc').val(category.desc);
 
-     //Oppening the modal
+     //Opening the modal
      $('#exampleModal').modal('show');
  }
 
- //Deliting from list
+ //Deleting from list
  function remove (index) { 
      //Looking for and deliting the index of the list
      categoryList.splice(index, 1);

@@ -43,7 +43,8 @@
                     <!-- Button trigger modal -->
                     <button id="btnAdd" type="button" class="btn ml-auto btn-lg
                         btn-outline-primary"
-                        data-toggle="modal" data-target="#exampleModal">
+                        data-toggle="modal" data-target="#exampleModal"
+                        onclick="showModal()">
                         +
                     </button>
                     <div class="modal fade" id="exampleModal" tabindex="-1"
@@ -59,9 +60,10 @@
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
+                                <!-- modal body -->
                                 <div class="modal-body text-left">
-                                    <div class="d-none alert alert-wartning"
-                                        id="divError">Error! Debe completar
+                                    <div class="d-none alert alert-warning text-center h5"
+                                        id="divErrorModal">Error! Debe completar
                                         todas las informaciones</div>
                                     <p class="h4">Producto</p>
                                     <hr>
@@ -72,10 +74,9 @@
                                             <input type="text"
                                                 class="form-control col-5
                                                 ml-auto"
-                                                id="nombre"
+                                                id="pNombre"
                                                 aria-describedby="nombreHelp"
-                                                placeholder="Nombre del
-                                                Producto">
+                                                placeholder="Nombre del Producto">
 
                                         </div>
                                         <div class="form-group row p-0 m-0">
@@ -83,10 +84,9 @@
                                             <input type="text"
                                                 class="form-control col-5
                                                 ml-auto"
-                                                id="precio"
+                                                id="pPrecio"
                                                 numeric
-                                                placeholder="Precio del
-                                                Producto">
+                                                placeholder="Precio del Producto">
                                         </div>
                                     </form>
                                     <!-- fin form agregar producto -->
@@ -95,11 +95,11 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn
                                         btn-secondary"
-                                        data-dismiss="modal">Close</button>
+                                        data-dismiss="modal">Cerrar</button>
                                     <button type="button" class="btn
-                                        btn-primary" onclick="add_product()">Save
-                                        changes</button>
+                                        btn-primary" id="btnGuardar">Guardar</button>
                                 </div>
+                                <!-- end modal body -->
                             </div>
                         </div>
                     </div>
@@ -118,40 +118,6 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- <tr>
-                                <th scope="row">1</th>
-                                <td>fdjvndfkvdn</td>
-                                <td>444</td>
-                                <td>
-                                    Sat Aug 08 2020 16:16:00 GTM-0400 (Bolivia
-                                    Time)
-                                </td>
-                                <td>
-                                    <button class="btn btn-outline-primary">
-                                        Editar
-                                    </button>
-                                    <button class="btn btn-outline-primary">
-                                        Remover
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>sdsfdfsd</td>
-                                <td>222</td>
-                                <td>
-                                    Sat Aug 08 2020 16:16:00 GTM-0400 (Bolivia
-                                    Time)
-                                </td>
-                                <td>
-                                    <button class="btn btn-outline-primary">
-                                        Editar
-                                    </button>
-                                    <button class="btn btn-outline-primary">
-                                        Remover
-                                    </button>
-                                </td>
-                            </tr> -->
                         </tbody>
                     </table>
                 </div>
